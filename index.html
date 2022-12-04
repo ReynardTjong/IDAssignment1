@@ -2,15 +2,103 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="with=device-width, initial-scale1.0" />
-    <title>ID Assignment1</title>
-    <link rel="stylesheet" href="style.css" type="text/css" />
+    <meta name="viewport" content="with=device-width, initial-scale=1.0" />
+    <title alt="ID Assignment-1">BLAƆK PIИK REVOLUTION</title>
+    <link rel="icon" href="./img/blackpink_webicon.png" type="image/-icon" />
+    <link rel="stylesheet" href="home.css" type="text/css" />
     <link rel="stylesheet" href="normalize.css" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css"
+    />
   </head>
-
   <body>
-    <div class="background_image">
-      <p></p>
-    </div>
+    <nav>
+      <a
+        href="https://www.ygfamily.com/artist/main.asp?LANGDIV=K&ATYPE=2&ARTIDX=70"
+        class="band"
+        >BLAƆK PIИK</a
+      >
+      <div class="menu-button"></div>
+      <div class="nav-bar">
+        <div class="nav-items">
+          <a href="index.html">HOME</a>
+          <a href="about.html">ABOUT</a>
+          <a href="music.html">MUSIC</a>
+          <a href="shop.html">SHOP</a>
+        </div>
+      </div>
+    </nav>
+
+    <section class="home">
+      <video
+        class="video-slide active"
+        src="./img/SnapSave.io-BLACKPINK - 'Shut Down' M_V.mp4"
+        autoplay
+        muted
+        loop
+      ></video>
+      <div class="content">
+        <h1>
+          Blackpink<br /><span><img src="./img/shutdown.jpg" /></span>
+        </h1>
+        <p><img src="./img/playbutton.png" id="icon" /></p>
+        <a href="https://blackpink.lnk.to/bornpink">New Album Out!</a>
+        <audio
+          id="ShutDown"
+          src="./img/onlymp3.to - BLACKPINK - 'Shut Down' (Official Audio)-JDRyqUx1X8M-192k-1654396249642.mp3"
+          loop
+        ></audio>
+      </div>
+      <div class="media-icons">
+        <a href="https://www.instagram.com/blackpinkofficial/?hl=en"
+          ><i class="fab fa-instagram"></i
+        ></a>
+        <a href="https://www.tiktok.com/@bp_tiktok?lang=en"
+          ><i class="fab fa-tiktok"></i
+        ></a>
+        <a href="https://open.spotify.com/artist/41MozSoPIsD1dJM0CLPjZF"
+          ><i class="fab fa-spotify"></i
+        ></a>
+        <a href="https://www.facebook.com/BLACKPINKOFFICIAL/"
+          ><i class="fab fa-facebook-f"></i
+        ></a>
+        <a
+          href="https://twitter.com/BLACKPINK?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
+          ><i class="fab fa-twitter"></i
+        ></a>
+        <a href="https://www.youtube.com/channel/UCOmHUn--16B90oW2L6FRR3A"
+          ><i class="fab fa-youtube"></i
+        ></a>
+      </div>
+    </section>
+    <script>
+      const menuButton = document.querySelector(".menu-button");
+      const navigation = document.querySelector(".nav-bar");
+
+      menuButton.addEventListener("click", () => {
+        menuButton.classList.toggle("active");
+        navigation.classList.toggle("active");
+      });
+
+      var ShutDown = document.getElementById("ShutDown");
+      var icon = document.getElementById("icon");
+
+      icon.onclick = function () {
+        if (ShutDown.paused) {
+          ShutDown.play();
+          icon.src = "./img/pausebutton.png";
+        } else {
+          ShutDown.pause();
+          icon.src = "./img/playbutton.png";
+        }
+      };
+    </script>
+    <footer>
+      <p class="copyright">
+        &lt;&lt;&lt; &copy; ID Assignment 1, Reynard Tjong (S10245153)
+        &gt;&gt;&gt;
+      </p>
+    </footer>
   </body>
 </html>
